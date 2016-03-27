@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>atmosmap</groupId>
+  <artifactId>atmosmap</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>atmosmap Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <!-- Atmosphere -->
+    <dependency>
+        <!-- Atmosphere's Comet Portable Runtime (CPR) -->
+        <groupId>org.atmosphere</groupId>
+        <artifactId>atmosphere-runtime</artifactId>
+        <version>0.9.7</version>
+    </dependency>
+    <dependency>
+        <!-- Atmosphere's Jersey module -->
+        <!-- Transitivity will pull all necessary dependencies -->
+        <!-- ie. Jersey 1.10 core, server, etc... -->
+        <groupId>org.atmosphere</groupId>
+        <artifactId>atmosphere-jersey</artifactId>
+        <version>0.9.7</version>
+    </dependency>
+    <dependency>
+        <!-- Atmosphere's jQuery plugin -->
+        <groupId>org.atmosphere</groupId>
+        <artifactId>atmosphere-jquery</artifactId>
+        <version>0.9.7</version>
+        <type>war</type>
+    </dependency>
+    <!-- Jersey's JSON mapper -->
+    <dependency>
+        <groupId>com.sun.jersey</groupId>
+        <artifactId>jersey-json</artifactId>
+        <version>1.10</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>atmosmap</finalName>
+  </build>
+</project>
